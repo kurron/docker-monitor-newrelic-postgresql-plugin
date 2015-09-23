@@ -1,0 +1,42 @@
+newrelic:
+  #
+  # Update with your New Relic account license key:
+  #
+  license_key: 'YOUR_LICENSE_KEY_HERE'
+  #
+  # Set to '1' for verbose output, remove for normal output.
+  # All output goes to stdout/stderr.
+  #
+  verbose: 1
+  #
+  # Update with your proxy information (optional) for
+  # communicating with new relic servers if you are behind
+  # a firewall.
+  #
+  #proxy:
+  #  address: ''
+  #  port:
+  #  user:
+  #  password:
+
+agents:
+  mongodb:
+    -
+      # for best outcome, us a full mongodb path for your "name"
+      agent_name: "localhost:27017/mongodb"
+      endpoint: "localhost"
+      database: "test"
+      ssl: false
+      #
+      #  If you are running MongoDB without authentication, please delete from now to the end
+      #  of the file.
+      #
+      #  If you *are* running authentication on MongoDB please enter the following.  In order
+      #  to monitor MongoDB, on an authenticated environment, an admin user is required.  To
+      #  add an admin user, just add the user to the admin database like so from the MongoDB CLI:
+      #
+      #  > use admin
+      #  > db.addUser("myadminuser", "myadminpassword")
+      #
+      #username: "root"
+      #password: ""
